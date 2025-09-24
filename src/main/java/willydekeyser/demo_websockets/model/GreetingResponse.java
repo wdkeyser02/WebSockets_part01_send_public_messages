@@ -1,4 +1,6 @@
 package willydekeyser.demo_websockets.model;
 
-public record GreetingResponse() {
+public record GreetingResponse(
+        String message
+) {
 }
