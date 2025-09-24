@@ -10,7 +10,7 @@ let buttonSendMessage;
 let clearMessages
 let messages;
 
-window.addEventListener('load', (e) => {
+window.addEventListener('load', () => {
     buttonConnect = document.getElementById("connect");
     buttonDisConnect = document.getElementById("disconnect");
     buttonSendMessage = document.getElementById("sendMessage");
@@ -21,7 +21,7 @@ window.addEventListener('load', (e) => {
     buttonSendMessage.disabled = true;
 })
 
-client.onConnect = (frame) => {
+client.onConnect = () => {
     client.subscribe('/topic/greetings', (greeting) => {
         printMessage(messages, greeting.body);
     });
